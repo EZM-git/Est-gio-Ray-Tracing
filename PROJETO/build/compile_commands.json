@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/eu/Documents/outros bglh/PROJETO/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\PROJETO.dir\\teste.cpp.obj -c \"C:\\Users\\eu\\Documents\\outros bglh\\PROJETO\\teste.cpp\"",
+  "file": "C:/Users/eu/Documents/outros bglh/PROJETO/teste.cpp",
+  "output": "C:/Users/eu/Documents/outros bglh/PROJETO/build/CMakeFiles/PROJETO.dir/teste.cpp.obj"
+}
+]

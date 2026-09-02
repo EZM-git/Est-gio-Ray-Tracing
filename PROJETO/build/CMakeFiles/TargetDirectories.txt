@@ -1,0 +1,3 @@
+C:/Users/eu/Documents/outros bglh/PROJETO/build/CMakeFiles/PROJETO.dir
+C:/Users/eu/Documents/outros bglh/PROJETO/build/CMakeFiles/edit_cache.dir
+C:/Users/eu/Documents/outros bglh/PROJETO/build/CMakeFiles/rebuild_cache.dir
