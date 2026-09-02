@@ -1,3 +1,3 @@
 # Estágio Ray Tracing
 ## 1/9/2026
-Instalação do Cmake
+Instalação do Cmake, PPM Viewer e LiveShare
