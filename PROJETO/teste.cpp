@@ -8,6 +8,7 @@ int main(){
     cout << "P3\n" << img_width << ' ' << img_height << "\n255\n";
 
     for (int j = 0; j < img_height; j++) {
+        clog << "\nScanLines remaining: " << img_height - j << " \n"; // esse aq ta contando
         for (int i = 0; i < img_width; i++) {
             auto r = double(i) / (img_width-1);
             auto g = double(j) / (img_height-1);
@@ -19,7 +20,6 @@ int main(){
 
             cout << ir << ' ' << ig << ' ' << ib << '\n';
         }
-        
     }
+    clog << "\nDone.                    \n" ; 
 }
-
