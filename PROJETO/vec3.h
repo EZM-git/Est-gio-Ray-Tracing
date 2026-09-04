@@ -1,3 +1,6 @@
+#ifndef VEC3_H
+#define VEC3_H
+
 #include <cmath>
 #include <iostream>
 
@@ -12,10 +15,10 @@ class vec3 {
 
         // Função para retornar os valores xyz
         // Const serve para informar ao compilador que chamar essas funções não modifica nenhum dado do vetor
-        double x() const {return e[0];} 
-        double y() const {return e[1];} 
-        double z() const {return e[2];}
-
+        double x() const { return e[0]; };
+        double y() const { return e[1]; };
+        double z() const { return e[2]; };
+        
         vec3 operator-() const { return vec3(-e[0], -e[1], -e[2]); } // Invertes valores
         double operator[](int i) const { return e[i]; } // Só leitura
         double& operator[](int i) { return e[i]; } // Permite alteração
@@ -27,13 +30,6 @@ class vec3 {
         return *this; 
         }
         
-        /* 
-        vec3& operator+=(const vec3& v)
-        Ex:
-        vec3 a = {1, 1, 1};
-        vec3 b = {2, 2, 2};
-        vec3 c = a + b  // Onde o operator+ serve, para permitier q o + seja utilizado nesse caso aq
-        */
 
         vec3& operator*=(double t) { // Só pra multiplicar valores de um vetor, a partir de um valor determinado,
                                      // Você vai pegar o vetor atual e multiplicar todos os elementos, pelo valor recebido
@@ -55,7 +51,7 @@ class vec3 {
             return e[0]*e[0] + e[1]*e[1] + e[2]*e[2];
         }
 
-        // pitagoras em 3D, basicamente A² + B² + C² = D²]
+        // Pitágoras em 3D, basicamente A² + B² + C² = D²]
 };
 
 using point3 = vec3; 
@@ -81,7 +77,7 @@ inline std::ostream& operator<<(std::ostream& out, const vec3& v) {
 } 
 
 // Operações semelhantes as criadas na classe vec3
-// soma e subtraem os vetores
+// Soma e subtraem os vetores
 inline vec3 operator+(const vec3& u, const vec3& v){
     return vec3(u.e[0] + v.e[0], u.e[1] + v.e[1], u.e[2] + v.e[2]);
 }
@@ -89,6 +85,8 @@ inline vec3 operator+(const vec3& u, const vec3& v){
 inline vec3 operator-(const vec3& u, const vec3& v){
     return vec3(u.e[0] - v.e[0], u.e[1] - v.e[1], u.e[2] - v.e[2]);
 }
+
+// ao inves de fzr v[0] + u[0]... só fzr v + u
 
 inline vec3 operator*(const vec3& u, const vec3& v){
     return vec3(u.e[0] * v.e[0], u.e[1] * v.e[1], u.e[2] * v.e[2]);
@@ -106,8 +104,25 @@ inline vec3 operator/(const vec3& v, double t){
     return (1/t) * v;
 }
 
-inline double dot(const vec3& u, const vec3& v){ // Não entendi
+inline double dot(const vec3& u, const vec3& v){ // pegar o angulo dos dois pontos
     return u.e[0] * v.e[0]
         +  u.e[1] * v.e[1]
-        +  u.e[2] * v.e[2]; 
+        +  u.e[2] * v.e[2];
 }
+
+inline vec3 cross(const vec3& u, const vec3& v) {
+    return vec3(u.e[1] * v.e[2] - u.e[2] * v.e[1],
+                u.e[2] * v.e[0] - u.e[0] * v.e[2],
+                u.e[0] * v.e[1] - u.e[1] * v.e[0]);
+}
+
+inline vec3 unit_vector(const vec3& v) {
+    return v / v.length();
+}
+
+//
+//     .-----
+//           ------.
+//
+
+#endif
