@@ -6,15 +6,15 @@ using namespace std;
 
 double hit_sphere(const point3& center, double radius, const ray& r){
     vec3 oc = center - r.origin();
-    auto a = dot(r.direction(), r.direction());
-    auto b = -2.0 * dot(r.direction(), oc);
-    auto c = dot(oc, oc) - radius*radius;
-    auto discriminant = b*b - 4*a*c;
+    auto a = r.direction().length_squared();
+    auto h = dot(r.direction(), oc);
+    auto c = oc.length_squared() - radius*radius;
+    auto discriminant = h*h - 4*a*c;
 
     if (discriminant < 0){
         return -1.0;
     } else {
-        return (-b - sqrt(discriminant) ) / (2.0*a);
+        return (-h - sqrt(discriminant) ) / a;
     }
 }
 
@@ -58,7 +58,7 @@ int main() {
     cout << "P3\n" << img_width << " " << img_height << "\n255\n";
 
     for (int j = 0; j < img_height; j++) {
-        // clog << "\rScanlines remaining: " << (img_height - j) << " \n";
+        clog << "\rScanlines remaining: " << (img_height - j) << " \n";
 
         for (int i = 0; i < img_width; i++) {
             auto pixel_center = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
