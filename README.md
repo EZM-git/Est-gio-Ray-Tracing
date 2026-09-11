@@ -9,3 +9,6 @@ Início da implementação dos cálculos relacionados a distância entre objetos
 Criação de shading básico.
 ## 8/9/2026
 Implementação de Colisões.
+## 9/9/2026
+## 10/9/2026
+Implementação de esfera 3d.
