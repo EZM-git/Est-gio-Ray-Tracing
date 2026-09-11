@@ -13,3 +13,5 @@ Implementação de Colisões.
 Lista para a classe dos objetos com colisão, usamos o #include de memory e vector, para facilitar o trabalho e usar ponteiros inteligentes + vetores que podem mudar seu tamanho.
 ## 10/9/2026
 Implementação de esfera 3d.
+## 11/9/2026
+Implementação da classe camera e seus métodos e atributos.
