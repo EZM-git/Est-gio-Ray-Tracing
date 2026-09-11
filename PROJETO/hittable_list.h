@@ -2,13 +2,10 @@
 #define HITTABLE_LIST_H
 
 #include "hittable.h"
-#include <memory>  // Esta biblioteca traz ferramentas para gerenciar a memória do computador de forma automática e segura
+#include "rtproject.h"  // Esta biblioteca traz ferramentas para gerenciar a memória do computador de forma automática e segura
                    // É ela quem define o shared_ptr e o make_shared
 #include <vector>  // Esta biblioteca libera o std::vector, que funciona como uma lista/array que pode crescer ou diminuir de tamanho 
                    // dinamicamente enquanto o programa roda.
-
-using std::make_shared;
-using std::shared_ptr;
 
 class hittable_list : public hittable {
     public:
@@ -23,13 +20,13 @@ class hittable_list : public hittable {
             objects.push_back(object);
         }
 
-        bool hit(const ray& r, double ray_tmin, double ray_tmax, hit_record& rec) const override {
+        bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
             hit_record temp_rec; // estr temporaria
             bool hit_anything = false;
-            auto closest_so_far = ray_tmax; // dist do obj mais longe
+            auto closest_so_far = ray_t.max; // dist do obj mais longe
 
             for (const auto& object : objects) {
-                if (object->hit(r, ray_tmin, closest_so_far, temp_rec)) {
+                if (object->hit(r, interval(ray_t.min, closest_so_far), temp_rec)) {
                     hit_anything = true;
                     closest_so_far = temp_rec.t;
                     rec = temp_rec;

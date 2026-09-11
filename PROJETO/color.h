@@ -1,6 +1,7 @@
 #ifndef COLOR_H
 #define COLOR_H
 
+#include "rtproject.h"
 #include "vec3.h"
 
 using color = vec3;
