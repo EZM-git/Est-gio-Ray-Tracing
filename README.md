@@ -10,5 +10,6 @@ Criação de shading básico.
 ## 8/9/2026
 Implementação de Colisões.
 ## 9/9/2026
+Lista para a classe dos objetos com colisão, usamos o #include de memory e vector, para facilitar o trabalho e usar ponteiros inteligentes + vetores que podem mudar seu tamanho.
 ## 10/9/2026
 Implementação de esfera 3d.
