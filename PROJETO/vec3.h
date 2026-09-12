@@ -23,19 +23,19 @@ class vec3 {
         double& operator[](int i) { return e[i]; } // Permite alteração
 
         vec3& operator+=(const vec3& v) { // Só pra somar vetores, você vai pegar o vetor atual e somar com o vetor que colocar ali
-        e[0] += v.e[0];
-        e[1] += v.e[1];
-        e[2] += v.e[2];
-        return *this; 
+            e[0] += v.e[0];
+            e[1] += v.e[1];
+            e[2] += v.e[2];
+            return *this; 
         }
         
 
         vec3& operator*=(double t) { // Só pra multiplicar valores de um vetor, a partir de um valor determinado,
                                      // Você vai pegar o vetor atual e multiplicar todos os elementos, pelo valor recebido
-        e[0] *= t;
-        e[1] *= t;
-        e[2] *= t;
-        return *this;
+            e[0] *= t;
+            e[1] *= t;
+            e[2] *= t;
+            return *this;
         }
 
         vec3& operator/=(double t) { 
