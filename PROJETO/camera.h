@@ -33,8 +33,8 @@ class camera {
         int    image_height;    // Altura da imagem renderizada
         point3 center;          // Centro da câmera
         point3 pixel00_loc;     // Localização do pixel 0, 0
-        vec3   pixel_delta_u;   // Deslocamento de um pixel para a direita
-        vec3   pixel_delta_v;   // Deslocamento para o pixel abaixo
+        vec3   pixel_delta_u;   // Deslocamento de um pixel no eixo x
+        vec3   pixel_delta_v;   // Deslocamento para o pixel no eixo y
 
         void initialize() {
             image_height = int(image_width / aspect_ratio);
