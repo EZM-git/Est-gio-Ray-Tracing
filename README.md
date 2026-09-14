@@ -15,3 +15,5 @@ Lista para a classe dos objetos com colisão, usamos o #include de memory e vect
 Implementação de esfera 3d.
 ## 11/9/2026
 Implementação da classe camera e seus métodos e atributos.
+## 14/9/2026
+Hoje vimos o conceito de antialiasing, pensamos no que fazer para atingir esse resultado, pretendemos usar o modelo mais simples de extender o raio do centro do pixel até a metade do caminho dos quatro pixels vizinhos, representando a cor daquela pequena região da tela.
