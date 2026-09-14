@@ -30,7 +30,7 @@ class interval {
 
 // Constantes estáticas
 // Dois estados fundamentais da matemática e da computação gráfica
-const interval interval::empty     = interval(+infinity, -infinity); // O conjunto vazio
+const interval interval::empty      = interval(+infinity, -infinity); // O conjunto vazio
 const interval interval::universe  = interval(-infinity, +infinity); // O conjunto de todos os números reais
 
 #endif
