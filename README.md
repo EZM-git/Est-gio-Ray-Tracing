@@ -19,3 +19,5 @@ Implementação da classe camera e seus métodos e atributos.
 Hoje vimos o conceito de antialiasing, pensamos no que fazer para atingir esse resultado, pretendemos usar o modelo mais simples de extender o raio do centro do pixel até a metade do caminho dos quatro pixels vizinhos, representando a cor daquela pequena região da tela.
 ## 15/9/2026
 Hoje terminamos de fazer a função para o anti-aliasing, pegando lugares aleatórios no pixel, vendo as cores e fazendo a média, para colocar nesse pixel, gerando assim uma imagem mais limpa.
+## 16/9/2026
+Hoje fizemos uma textura básica, refletindo raios de maneira aleatória, se refletir 100%, irá manter a cor, se absorver tudo, será preto, no momento estamos usamos 50% para ter um cor cinza.
