@@ -6,10 +6,7 @@
 #include <limits>
 #include <memory>
 #include <cstdlib> // novo
-#include "color.h"
-#include "ray.h"
-#include "vec3.h"
-#include "interval.h"
+
 
 using std::make_shared;
 using std::shared_ptr;
@@ -34,5 +31,9 @@ inline double random_double(double min, double max){
     return min + (max-min)*random_double();
 };
 
+#include "vec3.h"
+#include "color.h"
+#include "ray.h"
+#include "interval.h"
 
 #endif
