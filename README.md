@@ -21,3 +21,5 @@ Hoje vimos o conceito de antialiasing, pensamos no que fazer para atingir esse r
 Hoje terminamos de fazer a função para o anti-aliasing, pegando lugares aleatórios no pixel, vendo as cores e fazendo a média, para colocar nesse pixel, gerando assim uma imagem mais limpa.
 ## 16/9/2026
 Hoje fizemos uma textura básica, refletindo raios de maneira aleatória, se refletir 100%, irá manter a cor, se absorver tudo, será preto, no momento estamos usamos 50% para ter um cor cinza.
+## 17/9/2026
+Hoje colocamos um limite na profundidade dos raios para a função não continuar até dar stack overflow, também ignoramos raios muito pertos, para tirar esse tanto de bolinha junta com a outra no hora de renderizar.
