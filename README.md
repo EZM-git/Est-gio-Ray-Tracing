@@ -23,3 +23,6 @@ Hoje terminamos de fazer a função para o anti-aliasing, pegando lugares aleat�
 Hoje fizemos uma textura básica, refletindo raios de maneira aleatória, se refletir 100%, irá manter a cor, se absorver tudo, será preto, no momento estamos usamos 50% para ter um cor cinza.
 ## 17/9/2026
 Hoje colocamos um limite na profundidade dos raios para a função não continuar até dar stack overflow, também ignoramos raios muito pertos, para tirar esse tanto de bolinha junta com a outra no hora de renderizar.
+## 19/9/2026
+Hoje fizemos os raios refletirem em uma maneira menos uniforme e mais distantes do ponto normal do objeto.
+A diferença é bem sutil mas as sombras estão melhores e ambas as esferas (o chão é uma esfera larga e fina) tem um tom azulado do céu
