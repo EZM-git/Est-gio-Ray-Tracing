@@ -25,7 +25,7 @@ int main() {
 
 /*
 Além da nova função `sample_square()` apresentada acima, você também encontrará a função `sample_disk()` no código-fonte do GitHub. 
-Ela foi incluída para o caso de você querer experimentar com pixels que não sejam quadrados, mas não a utilizaremos neste livro. 
+Ela foi incluída para o caso de você querer experimentar com pixels que não sejam quadrados, mas não a utilizaremos. 
 A função `sample_disk()` depende da função `random_in_unit_disk()`, que é definida mais adiante.
 */ 
 // @Otávio Pênis Moggado
