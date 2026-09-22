@@ -26,3 +26,5 @@ Hoje colocamos um limite na profundidade dos raios para a função não continua
 ## 19/9/2026
 Hoje fizemos os raios refletirem em uma maneira menos uniforme e mais distantes do ponto normal do objeto.
 A diferença é bem sutil mas as sombras estão melhores e ambas as esferas (o chão é uma esfera larga e fina) tem um tom azulado do céu
+## 21/9/2026
+Hoje vimos que nossa esfera está bem mais escura do que deveria ser, pois mesmo refletindo 50% dos raios, ela ainda n estava na metade das cores (quando se coloca a foto em um aplicativo e pega a cor), então vimos como os programas normalmente esperam que a imagem seja "gamma corrected", como a nossa era em linear space, a transformamos para gamma space, pegando a raiz quadrada do componente linear.
