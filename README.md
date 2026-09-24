@@ -30,3 +30,5 @@ A diferença é bem sutil mas as sombras estão melhores e ambas as esferas (o c
 Hoje vimos que nossa esfera está bem mais escura do que deveria ser, pois mesmo refletindo 50% dos raios, ela ainda n estava na metade das cores (quando se coloca a foto em um aplicativo e pega a cor), então vimos como os programas normalmente esperam que a imagem seja "gamma corrected", como a nossa era em linear space, a transformamos para gamma space, pegando a raiz quadrada do componente linear.
 ## 22/9/2026
 Hoje começamos a fazer a classe de materiais, decidimos optar por fazer uma classe abstrata, que produz um raio que se espalha, iremos primeiro fazer um material de metal, mas ainda temos que terminar a classe abstrata para facilitar a implementação de outros futuros materiais.
+## 23/9/2026
+Hoje começamos a ver sobre albedo, que seria a "branquice", usado para definir uma reflexão fracionária, ele vai variar com a cor do material (que usaremos futuramente para implementar materiais de vidro) e pode variar com a direção da visão. Escolheremos sempre espalhar.
