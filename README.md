@@ -32,3 +32,5 @@ Hoje vimos que nossa esfera está bem mais escura do que deveria ser, pois mesmo
 Hoje começamos a fazer a classe de materiais, decidimos optar por fazer uma classe abstrata, que produz um raio que se espalha, iremos primeiro fazer um material de metal, mas ainda temos que terminar a classe abstrata para facilitar a implementação de outros futuros materiais.
 ## 23/9/2026
 Hoje começamos a ver sobre albedo, que seria a "branquice", usado para definir uma reflexão fracionária, ele vai variar com a cor do material (que usaremos futuramente para implementar materiais de vidro) e pode variar com a direção da visão. Escolheremos sempre espalhar.
+## 24/9/2026
+Hoje avançamos para os materiais metálicos polidos! Diferente do material difuso, o metal não espalha os raios de luz de forma aleatória: ele reflete o raio como um espelho.
