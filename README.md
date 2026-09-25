@@ -34,3 +34,5 @@ Hoje começamos a fazer a classe de materiais, decidimos optar por fazer uma cla
 Hoje começamos a ver sobre albedo, que seria a "branquice", usado para definir uma reflexão fracionária, ele vai variar com a cor do material (que usaremos futuramente para implementar materiais de vidro) e pode variar com a direção da visão. Escolheremos sempre espalhar.
 ## 24/9/2026
 Hoje avançamos para os materiais metálicos polidos! Diferente do material difuso, o metal não espalha os raios de luz de forma aleatória: ele reflete o raio como um espelho.
+## 25/9/2026
+Hoje terminamos de fazer o material metálico.
