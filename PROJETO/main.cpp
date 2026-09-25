@@ -4,14 +4,22 @@
 #include "hittable_list.h"
 #include "sphere.h"
 #include "camera.h"
+#include "material.h"
 
 using namespace std;
 
 int main() {
     hittable_list world;
 
-    world.add(make_shared<sphere>(point3(0, 0, -1), 0.5)); // bola
-    world.add(make_shared<sphere>(point3(0, -100.5, -1), 100)); // chao
+    auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
+    auto material_center = make_shared<lambertian>(color(0.2, 0.6, 0.3));
+    auto material_left = make_shared<metal>(color(0.1, 0.2, 0.2));
+    auto material_right = make_shared<metal>(color(0.8, 0.3, 0.1));
+
+    world.add(make_shared<sphere>(point3(0, -100.5, -1.0), 100, material_ground)); // bola do chao man, e x y e z nessa ordem certo
+    world.add(make_shared<sphere>(point3(0, 0, -1.2), 0.5, material_center)); // bola do meio
+    world.add(make_shared<sphere>(point3(-1.0, 0, -1.0), 0.5, material_left)); // bola da esquerda
+    world.add(make_shared<sphere>(point3(1, 0, -1.0), 0.5, material_right)); // bola da direita
 
     camera cam;
 
