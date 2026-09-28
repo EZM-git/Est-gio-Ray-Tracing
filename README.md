@@ -36,3 +36,5 @@ Hoje começamos a ver sobre albedo, que seria a "branquice", usado para definir 
 Hoje avançamos para os materiais metálicos polidos! Diferente do material difuso, o metal não espalha os raios de luz de forma aleatória: ele reflete o raio como um espelho.
 ## 25/9/2026
 Hoje terminamos de fazer o material metálico.
+## 28/9/2026
+Hoje tivemos a inserção de um novo tipo de material, o material do tipo felpudo.
