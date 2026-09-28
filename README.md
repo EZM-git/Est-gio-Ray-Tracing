@@ -37,4 +37,4 @@ Hoje avançamos para os materiais metálicos polidos! Diferente do material difu
 ## 25/9/2026
 Hoje terminamos de fazer o material metálico.
 ## 28/9/2026
-Hoje tivemos a inserção de um novo tipo de material, o material do tipo felpudo.
+Hoje tivemos a inserção de um novo tipo de variação de material do metal, o metal do tipo "felpudo".
