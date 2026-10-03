@@ -42,3 +42,5 @@ Hoje tivemos a inserção de um novo tipo de variação de material do metal, o 
 Hoje tivemos a inserção de um novo tipo de material, o material do tipo "dielétrico" que da ínicio aos vidros.
 ## 30/9/2026
 Hoje avançamos para a reflexão interna total! Quando a luz tenta sair de um meio para outro em um ângulo raso, a refração se torna impossível e a superfície vira um espelho perfeito.
+## 2/10/2026
+Hoje fizemos mais alguns testes em relação aos novo tipos adicionados.
