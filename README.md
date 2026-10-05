@@ -44,3 +44,5 @@ Hoje tivemos a inserção de um novo tipo de material, o material do tipo "diel�
 Hoje avançamos para a reflexão interna total! Quando a luz tenta sair de um meio para outro em um ângulo raso, a refração se torna impossível e a superfície vira um espelho perfeito.
 ## 2/10/2026
 Hoje fizemos mais alguns testes em relação aos novo tipos adicionados.
+## 5/10/2026
+Hoje começamos a implementar a possibilidade de ajustar o tamanho do campo de visão da câmera, que é o ângulo visual de ponta a ponta da imagem.
