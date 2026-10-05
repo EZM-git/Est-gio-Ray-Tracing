@@ -12,6 +12,8 @@ class camera {
         int image_width = 100; // img renderizada largura em pixels
         int samples_per_pixel = 10; // qtd de bglh aleatorio por pixel
         int max_depth = 10; // profundidade max q pode ir
+
+        double vfov = 90; // Ângulo de visão vertical em graus
         
         void render(const hittable& world){
             initialize();
@@ -51,7 +53,9 @@ class camera {
 
             // Determinar as dimensões do vp
             auto focal_length = 1.0;
-            auto vp_height = 2.0;
+            auto theta = degrees_to_radians(vfov);
+            auto h = std::tan(theta/2);
+            auto vp_height = 2 * h * focal_length;
             auto vp_width = vp_height * (double(image_width)/image_height);
 
             // Calcule os vetores ao longo das bordas horizontal e vertical da viewport 
