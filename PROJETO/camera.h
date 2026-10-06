@@ -14,7 +14,10 @@ class camera {
         int max_depth = 10; // profundidade max q pode ir
 
         double vfov = 90; // Ângulo de visão vertical em graus
-        
+        point3 lookfrom = point3(0, 0, 0); // de onde a câmera vem
+        point3 lookat = point3(0, 0, 0); // pra onde a câmera ta olhando
+        vec3 vup = vec3(0, 1, 0); // Camera-relative "up" direction?
+
         void render(const hittable& world){
             initialize();
             
@@ -42,6 +45,7 @@ class camera {
         point3 pixel00_loc;     // Localização do pixel 0, 0
         vec3   pixel_delta_u;   // Deslocamento de um pixel para a direita
         vec3   pixel_delta_v;   // Deslocamento para o pixel abaixo
+        vec3   u, v, w;
 
         void initialize() {
             image_height = int(image_width / aspect_ratio);
@@ -49,25 +53,29 @@ class camera {
             
             pixel_samples_scale = 1.0 / samples_per_pixel;
             
-            center = point3(0, 0, 0);
+            center = lookfrom;
 
             // Determinar as dimensões do vp
-            auto focal_length = 1.0;
+            auto focal_length = (lookfrom - lookat).length();
             auto theta = degrees_to_radians(vfov);
             auto h = std::tan(theta/2);
             auto vp_height = 2 * h * focal_length;
             auto vp_width = vp_height * (double(image_width)/image_height);
 
+            w = unit_vector(lookfrom - lookat);
+            u = unit_vector(cross(vup, w));
+            v = cross(w, u);
+            
             // Calcule os vetores ao longo das bordas horizontal e vertical da viewport 
-            auto vp_u = vec3(vp_width, 0, 0); // vp inteiro hor
-            auto vp_v = vec3(0, -vp_height, 0); // msm soq ver
+            vec3 vp_u = vp_width * u; // vp inteiro hor
+            vec3 vp_v = vp_height * -v; // msm soq ver
 
             // Calcula os vetores delta horizontal e vertical de pixel para pixel
             pixel_delta_u = vp_u / image_width; // 1 pixel hor
             pixel_delta_v = vp_v / image_height; // 1 pixel ver
 
             // Calcula a localização do pixel superior esquerdo ?? Porque
-            auto vp_upper_left = center - vec3(0, 0, focal_length) - vp_u/2 - vp_v/2;
+            auto vp_upper_left = center - (focal_length * w) - vp_u/2 - vp_v/2;
             pixel00_loc = vp_upper_left + 0.5*(pixel_delta_u + pixel_delta_v);
         }
         
