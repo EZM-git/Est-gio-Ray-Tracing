@@ -46,3 +46,5 @@ Hoje avançamos para a reflexão interna total! Quando a luz tenta sair de um me
 Hoje fizemos mais alguns testes em relação aos novo tipos adicionados.
 ## 5/10/2026
 Hoje começamos a implementar a possibilidade de ajustar o tamanho do campo de visão da câmera, que é o ângulo visual de ponta a ponta da imagem.
+# 6/10/2026
+Hoje terminamos a propriedade de ter uma câmera mais dinâmica, agora podemos mudar o fov, onde a câmera está e para onde ela está olhando, dando inúmeras possibilidades e ângulos diferentes.
