@@ -48,3 +48,7 @@ Hoje fizemos mais alguns testes em relação aos novo tipos adicionados.
 Hoje começamos a implementar a possibilidade de ajustar o tamanho do campo de visão da câmera, que é o ângulo visual de ponta a ponta da imagem.
 # 6/10/2026
 Hoje terminamos a propriedade de ter uma câmera mais dinâmica, agora podemos mudar o fov, onde a câmera está e para onde ela está olhando, dando inúmeras possibilidades e ângulos diferentes.
+# 8/10/2026
+Hoje repassamos o conceito de profundidade de campo, que nesse caso será o desfoque de profundidade, onde terá uma distância para o foco ideal e uma distância do foco até o plano, neste caso, usaremos a mesma distância do plano para ficar na distância do foco ideal, mas criaremos uma variável chamada abertura, que será o tamanho da abertura do buraco da lente para controlarmos o blur.
+# 9/10/2026
+Hoje concluimos o desfoque de profundidade, quanto maior o raio do disco de desfoque, maior o desfoque. Colocamos uma nova variável na classe da câmera.
