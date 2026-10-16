@@ -15,8 +15,12 @@ class camera {
 
         double vfov = 90; // Ângulo de visão vertical em graus
         point3 lookfrom = point3(0, 0, 0); // de onde a câmera vem
-        point3 lookat = point3(0, 0, 0); // pra onde a câmera ta olhando
+        point3 lookat = point3(0, 0, -1); // pra onde a câmera ta olhando
         vec3 vup = vec3(0, 1, 0); // Camera-relative "up" direction?
+
+        double defocus_angle = 0;  
+        double focus_dist = 10;   
+
 
         void render(const hittable& world){
             initialize();
@@ -46,6 +50,8 @@ class camera {
         vec3   pixel_delta_u;   // Deslocamento de um pixel para a direita
         vec3   pixel_delta_v;   // Deslocamento para o pixel abaixo
         vec3   u, v, w;
+        vec3   defocus_disk_u;       
+        vec3   defocus_disk_v;      
 
         void initialize() {
             image_height = int(image_width / aspect_ratio);
@@ -56,10 +62,9 @@ class camera {
             center = lookfrom;
 
             // Determinar as dimensões do vp
-            auto focal_length = (lookfrom - lookat).length();
             auto theta = degrees_to_radians(vfov);
             auto h = std::tan(theta/2);
-            auto vp_height = 2 * h * focal_length;
+            auto vp_height = 2 * h * focus_dist;
             auto vp_width = vp_height * (double(image_width)/image_height);
 
             w = unit_vector(lookfrom - lookat);
@@ -75,8 +80,12 @@ class camera {
             pixel_delta_v = vp_v / image_height; // 1 pixel ver
 
             // Calcula a localização do pixel superior esquerdo ?? Porque
-            auto vp_upper_left = center - (focal_length * w) - vp_u/2 - vp_v/2;
+            auto vp_upper_left = center - (focus_dist * w) - vp_u/2 - vp_v/2;
             pixel00_loc = vp_upper_left + 0.5*(pixel_delta_u + pixel_delta_v);
+
+            auto defocus_radius = focus_dist * std::tan(degrees_to_radians(defocus_angle / 2));
+            defocus_disk_u = u * defocus_radius;
+            defocus_disk_v = v * defocus_radius;
         }
         
         ray get_ray(int i, int j) const {
@@ -86,16 +95,22 @@ class camera {
             auto offset = sample_square();
             auto pixel_sample = pixel00_loc + ((i + offset.x()) * pixel_delta_u) + ((j + offset.y()) * pixel_delta_v);
 
-            auto ray_origin = center;
+            auto ray_origin = (defocus_angle <= 0) ? center : defocus_disk_sample();
             auto ray_direction = pixel_sample - ray_origin;
+            auto ray_time = random_double(0.0, 1.0); // tempo aleatorio entre 0 e 1
 
-            return ray(ray_origin, ray_direction);
+            return ray(ray_origin, ray_direction, ray_time);
         }
 
         vec3 sample_square() const {
             // retorna o vetor para um ponto aleatório em [-.5, -.5] - [+.5, +.5] unidade do quadrado
             // isso seria a metado do pixel q ele ta indo no ponto aleatório, por isso .5 -- metade do pixel
             return vec3(random_double() - 0.5, random_double() - 0.5, 0);
+        }
+
+        point3 defocus_disk_sample() const {
+            auto p = random_in_unit_disk();
+            return center + (p[0] * defocus_disk_u) + (p[1] * defocus_disk_v);
         }
 
         color ray_color(const ray& r, int depth, const hittable& world) const { 

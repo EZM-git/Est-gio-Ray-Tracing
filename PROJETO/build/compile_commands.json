@@ -1,8 +1,8 @@
 [
 {
-  "directory": "C:/Users/eu/Documents/outros bglh/PROJETO/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -g -o CMakeFiles\\PROJETO.dir\\main.cpp.obj -c \"C:\\Users\\eu\\Documents\\outros bglh\\PROJETO\\main.cpp\"",
-  "file": "C:/Users/eu/Documents/outros bglh/PROJETO/main.cpp",
-  "output": "C:/Users/eu/Documents/outros bglh/PROJETO/build/CMakeFiles/PROJETO.dir/main.cpp.obj"
+  "directory": "C:/Users/manua/Documents/PROJETO/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\PROJETO.dir\\main.cpp.obj -c C:\\Users\\manua\\Documents\\PROJETO\\main.cpp",
+  "file": "C:/Users/manua/Documents/PROJETO/main.cpp",
+  "output": "CMakeFiles/PROJETO.dir/main.cpp.obj"
 }
 ]
