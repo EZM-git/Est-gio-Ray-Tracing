@@ -54,3 +54,5 @@ Hoje repassamos o conceito de profundidade de campo, que nesse caso será o desf
 Hoje concluimos o desfoque de profundidade, quanto maior o raio do disco de desfoque, maior o desfoque. Colocamos uma nova variável na classe da câmera.
 # 15/10/2026
 Hoje começamos a fazer o motion blur, onde planejaremos para que os objetos possam se mover e por isso ficarão borrados na imagem, assim como em uma câmera real.
+# 16/10/2026
+Hoje progredimos com o motion blur, pensamos em mudar o centro de acordo com a movimentação da bola, tendo centro1 (onde ela estava) e o centro 2 (onde ela vai ficar no 2º frame).
