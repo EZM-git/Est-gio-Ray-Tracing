@@ -202,12 +202,21 @@ CMakeFiles/PROJETO.dir/main.cpp.obj: \
  C:\Users\manua\Documents\PROJETO\color.h \
  C:\Users\manua\Documents\PROJETO\interval.h \
  C:\Users\manua\Documents\PROJETO\ray.h \
+ C:\Users\manua\Documents\PROJETO\bvh.h \
+ C:\Users\manua\Documents\PROJETO\aabb.h \
  C:\Users\manua\Documents\PROJETO\hittable.h \
  C:\Users\manua\Documents\PROJETO\hittable_list.h \
  C:/msys64/mingw64/include/c++/16.2.0/vector \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_vector.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/stl_bvector.h \
  C:/msys64/mingw64/include/c++/16.2.0/bits/vector.tcc \
- C:\Users\manua\Documents\PROJETO\sphere.h \
+ C:/msys64/mingw64/include/c++/16.2.0/algorithm \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/stl_algo.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/algorithmfwd.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/stl_heap.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/uniform_int_dist.h \
+ C:/msys64/mingw64/include/c++/16.2.0/bits/ranges_algo.h \
+ C:/msys64/mingw64/include/c++/16.2.0/pstl/glue_algorithm_defs.h \
  C:\Users\manua\Documents\PROJETO\camera.h \
- C:\Users\manua\Documents\PROJETO\material.h
+ C:\Users\manua\Documents\PROJETO\material.h \
+ C:\Users\manua\Documents\PROJETO\sphere.h
