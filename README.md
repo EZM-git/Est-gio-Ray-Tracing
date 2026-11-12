@@ -58,3 +58,5 @@ Hoje começamos a fazer o motion blur, onde planejaremos para que os objetos pos
 Hoje progredimos com o motion blur, pensamos em mudar o centro de acordo com a movimentação da bola, tendo centro1 (onde ela estava) e o centro 2 (onde ela vai ficar no 2º frame).
 # 18/10/2026
 Hoje apenas revisamos os códigos feitos anteriormente.
+# 12/11/2026
+Hoje terminamos de implementar as texturas sólidas e o padrão xadrez, agora a gente consegue pintar direto no espaço 3D e mudar a escala dos padrões nos materiais.
