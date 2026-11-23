@@ -219,4 +219,5 @@ CMakeFiles/PROJETO.dir/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/16.2.0/pstl/glue_algorithm_defs.h \
  C:\Users\manua\Documents\PROJETO\camera.h \
  C:\Users\manua\Documents\PROJETO\material.h \
+ C:\Users\manua\Documents\PROJETO\texture.h \
  C:\Users\manua\Documents\PROJETO\sphere.h

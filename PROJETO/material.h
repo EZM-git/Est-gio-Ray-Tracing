@@ -20,8 +20,6 @@ class lambertian : public material {
         lambertian(const color& albedo) : tex(make_shared<solid_color>(albedo)) {}
         lambertian(shared_ptr<texture> tex) : tex(tex) {}
 
-
-
         bool scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered)
         const override {
             auto scatter_direction = rec.normal + random_unit_vector();
@@ -35,7 +33,6 @@ class lambertian : public material {
         }
 
     private:
-        color albedo;
         shared_ptr<texture> tex;
 };
 
